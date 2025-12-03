@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { addMovie } from '../../services/movie'; 
 import type { MovieData } from '../../services/movie'; // import MovieData type from the service that exports it
 
+
 const AddMovie: React.FC = () => {
   const navigate = useNavigate();
   
