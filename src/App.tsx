@@ -3,6 +3,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import AddMovie from './pages/admin/AddMovie';
 import Home from './pages/Home'; 
+import BookingPage from './pages/BookingPage';
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
         {/* <Route path="/" element={<Home />} /> */}
 
         <Route path="/admin/add-movie" element={<AddMovie />} />
+
+        <Route path="/book/:movieId" element={<BookingPage />} />
       </Routes>
     </Router>
   );
