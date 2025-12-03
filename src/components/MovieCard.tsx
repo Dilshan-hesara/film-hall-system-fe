@@ -1,6 +1,7 @@
 import React from 'react';
 import type { MovieData } from '../services/movie'; 
-
+import { Link } from 'react-router-dom';
+import '../index.css' 
 interface MovieCardProps {
   movie: MovieData;
 }
@@ -37,9 +38,16 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
         </div>
 
         {/* 3. Book Now Button */}
-        <button className="w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2 rounded-lg transition-colors">
+        {/* <button className="w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2 rounded-lg transition-colors">
           Book Now
-        </button>
+        </button> */}
+
+        <Link 
+  to={`/book/${movie._id}`} 
+  className="block w-full text-center bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2 rounded-lg transition-colors"
+>
+  Book Now
+</Link>
       </div>
     </div>
   );
