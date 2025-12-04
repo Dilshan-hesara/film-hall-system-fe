@@ -7,6 +7,10 @@ import BookingPage from './pages/BookingPage';
 import AddHall from './pages/admin/AddHall'; 
 import AddShowtime from './pages/admin/AddShowtime';
 import MovieDetails from './pages/MovieDetails';
+
+import MyBookings from './pages/MyBookings';
+
+// ...
 function App() {
   return (
     <Router>
@@ -27,6 +31,9 @@ function App() {
         <Route path="/movie/:id" element={<MovieDetails />} /> 
         
         <Route path="/book/:movieId" element={<BookingPage />} />
+
+        <Route path="/my-bookings" element={<MyBookings />} />
+
       </Routes>
     </Router>
   );
