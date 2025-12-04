@@ -4,7 +4,9 @@ import Register from './pages/Register';
 import AddMovie from './pages/admin/AddMovie';
 import Home from './pages/Home'; 
 import BookingPage from './pages/BookingPage';
-
+import AddHall from './pages/admin/AddHall'; 
+import AddShowtime from './pages/admin/AddShowtime';
+import MovieDetails from './pages/MovieDetails';
 function App() {
   return (
     <Router>
@@ -16,6 +18,14 @@ function App() {
 
         <Route path="/admin/add-movie" element={<AddMovie />} />
 
+        <Route path="/book/:movieId" element={<BookingPage />} />
+        <Route path="/admin/add-hall" element={<AddHall />} />
+        <Route path="/admin/add-showtime" element={<AddShowtime />} />
+
+
+        {/* Movie Details Page Route */}
+        <Route path="/movie/:id" element={<MovieDetails />} /> 
+        
         <Route path="/book/:movieId" element={<BookingPage />} />
       </Routes>
     </Router>
