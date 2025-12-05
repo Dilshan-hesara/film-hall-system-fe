@@ -297,31 +297,7 @@ const MovieDetails: React.FC = () => {
             </div>
           )}
 
-<br />
-                   <div className="grid gap-6">
-              {/* Showtimes Grouping logic can be added here, currently showing list */}
-              {showtimes.map((show) => (
-                <div 
-                  key={show._id} 
-                  className="bg-gray-800 p-4 rounded-lg flex justify-between items-center border border-gray-700 hover:border-blue-500 transition-all cursor-pointer group"
-                  onClick={() => handleBooking(show)}
-                >
-                  <div>
-                    <p className="text-lg font-bold text-white">{show.showDate}</p>
-                    <p className="text-sm text-gray-400">{show.hall.name}</p>
-                  </div>
-                  
-                  <div className="text-right">
-                    <p className="text-xl font-bold text-green-400">{show.showTime}</p>
-                    <p className="text-xs text-gray-500">LKR {show.ticketPrice}</p>
-                  </div>
 
-                  <button className="bg-blue-600 group-hover:bg-blue-500 text-white px-4 py-2 rounded font-semibold">
-                    Book Seat
-                  </button>
-                </div>
-              ))}
-            </div>
         </div>
 
         {/* Right Side ( Info) */}
