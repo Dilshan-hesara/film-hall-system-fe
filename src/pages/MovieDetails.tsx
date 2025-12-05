@@ -325,19 +325,63 @@ const MovieDetails: React.FC = () => {
         </div>
 
         {/* Right Side ( Info) */}
-        <div className="bg-gray-800 p-6 rounded-xl h-fit border border-gray-700">
-            <h3 className="text-xl font-bold mb-4">Movie Info</h3>
-            <p className="text-gray-400 text-sm mb-2">Duration: {movie.duration} mins</p>
-            <p className="text-gray-400 text-sm mb-2">Genre: {movie.genre}</p>
-
-            {/* Refund Warning Start */}
-    <div className="mt-6 p-3 bg-red-500/10 border border-red-500/50 rounded-lg flex items-start gap-2">
-        <span className="text-red-400 mt-0.5">⚠️</span>
-        <p className="text-red-400 text-xs font-medium leading-relaxed">
-            Note: Tickets cannot be refunded or cancelled once purchased.
-        </p>
-    </div>
+<div className="bg-gray-800 p-6 rounded-xl h-fit border border-gray-700">
+    
+    {/* Movie Details */}
+    <h3 className="text-xl font-bold mb-4">Movie Info</h3>
+    <div className="space-y-2 mb-6">
+        <div className="flex justify-between text-sm">
+            <span className="text-gray-400">Duration:</span>
+            <span className="text-gray-200 font-medium">{movie.duration} mins</span>
         </div>
+        <div className="flex justify-between text-sm">
+            <span className="text-gray-400">Genre:</span>
+            <span className="text-gray-200 font-medium">{movie.genre}</span>
+        </div>
+    </div>
+
+    <div className="h-px bg-gray-700 my-4"></div> {/* Divider Line */}
+
+    {/* Price Section */}
+    <h3 className="text-xl font-bold mb-2">Ticket Price</h3>
+    <div className="flex items-baseline gap-2 mb-1">
+        <span className="text-gray-400 text-sm">From</span>
+        <p className="text-3xl font-mono text-yellow-400">LKR {movie.ticketPrice}</p>
+        <span className="text-gray-400 text-sm font-medium">Upwards</span>
+    </div>
+    <p className="text-gray-500 text-xs mb-6">*Price varies based on seat selection</p>
+
+    {/* Modern Notices Section */}
+    <div className="space-y-3">
+        
+        {/* Child Ticket Notice */}
+        <div className="p-3 bg-blue-500/10 border border-blue-500/20 rounded-lg flex items-start gap-3">
+            <span className="text-blue-400 text-lg mt-0.5">ℹ️</span>
+            <div>
+                <p className="text-blue-400 text-xs font-bold uppercase mb-0.5 tracking-wide">
+                    Full Ticket Required
+                </p>
+                <p className="text-gray-400 text-xs leading-relaxed">
+                    No half tickets available. Children require a full ticket for admission.
+                </p>
+            </div>
+        </div>
+
+        {/* Refund Warning */}
+        <div className="p-3 bg-red-500/10 border border-red-500/20 rounded-lg flex items-start gap-3">
+            <span className="text-red-400 text-lg mt-0.5">⚠️</span>
+            <div>
+                <p className="text-red-400 text-xs font-bold uppercase mb-0.5 tracking-wide">
+                    Non-Refundable
+                </p>
+                <p className="text-gray-400 text-xs leading-relaxed">
+                    Tickets cannot be cancelled, refunded, or exchanged once purchased.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
 
 
 
@@ -345,5 +389,11 @@ const MovieDetails: React.FC = () => {
     </div>
   );
 };
+
+//         <div className="bg-gray-800 p-6 rounded-xl h-fit border border-gray-700">
+// //             <h3 className="text-xl font-bold mb-4">Ticket Price</h3>
+// //             <p className="text-3xl font-mono text-yellow-400 mb-2">LKR {movie.ticketPrice}</p>
+// //             <p className="text-gray-400 text-sm">Base price per person</p>
+// //         </div>
 
 export default MovieDetails;
