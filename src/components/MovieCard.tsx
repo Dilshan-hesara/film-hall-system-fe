@@ -42,11 +42,11 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
           Book Now
         </button> */}
 
-        <Link 
-  to={`/book/${movie._id}`} 
+<Link 
+  to={`/movie/${movie._id}`} 
   className="block w-full text-center bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2 rounded-lg transition-colors"
 >
-  Book Now
+  View Details & Book
 </Link>
       </div>
     </div>
