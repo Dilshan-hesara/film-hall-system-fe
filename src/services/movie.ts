@@ -8,7 +8,9 @@ export interface MovieData {
   duration: number;
   releaseDate: string;
   posterUrl: string;
+  coverUrl?: string;
   ticketPrice: number;
+  status?: 'Now Showing' | 'Coming Soon';
 }
 
 export const addMovie = async (movieData: MovieData) => {
@@ -20,3 +22,8 @@ export const getMovies = async () => {
   const response = await api.get('/movies/all');
   return response.data;
 };
+
+export const getMovieById = async (id: string) => {
+  const response = await api.get(`/movies/${id}`);
+  return response.data;
+};  
