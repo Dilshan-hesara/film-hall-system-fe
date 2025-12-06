@@ -23,7 +23,12 @@ import AdminDashboard from './pages/admin/AdminDashboard';
 import ManageMovies from './pages/admin/ManageMovies';
 import ManageHalls from './pages/admin/ManageHalls';
 import ManageSchedule from './pages/admin/ManageSchedule';
+import ManageBookings from './pages/admin/ManageBookings';
+import ManageUsers from './pages/admin/ManageUsers';
 
+// ...
+
+// ...
 // ...
 // ...
 // ...
@@ -68,6 +73,13 @@ function App() {
         <Route path="/admin/manage-halls" element={<ManageHalls />} />
 
         <Route path="/admin/manage-schedule" element={<ManageSchedule />} />
+
+        <Route path="/admin/manage-bookings" element={<ManageBookings />} />
+
+
+        <Route path="/admin/manage-users" element={<ManageUsers />} />
+
+
 
 
 

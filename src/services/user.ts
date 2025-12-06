@@ -25,3 +25,23 @@ export const changeUserPassword = async (data: any) => {
   const response = await api.put('/users/password', data);
   return response.data;
 };
+
+// ... imports
+
+// Get All Users
+export const getAllUsers = async () => {
+  const response = await api.get('/users/all');
+  return response.data;
+};
+
+// Update Role (Make Admin)
+export const updateUserRole = async (id: string, role: 'user' | 'admin') => {
+  const response = await api.put(`/users/role/${id}`, { role });
+  return response.data;
+};
+
+// Delete User
+export const deleteUser = async (id: string) => {
+  const response = await api.delete(`/users/${id}`);
+  return response.data;
+};
