@@ -226,6 +226,17 @@ const BookingPage: React.FC = () => {
           
           // Hall එක මාරු වුණොත් select කරපු seats අයින් කරන්න
           setSelectedSeats([]);
+
+          console.log("Fetching seats for:", { movieId, date, time, hallId });
+
+          // const takenSeats = await getOccupiedSeats(movieId, date, time, hallId);
+          
+          // 👇 මේ Log එක දාන්න: Backend එකෙන් එන දත්ත මොනවද?
+          console.log("Occupied Seats Received:", takenSeats);
+
+          setOccupiedSeats(takenSeats);
+
+          
           
         } catch (error) {
           console.error("Failed to load data", error);
