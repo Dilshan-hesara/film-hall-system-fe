@@ -20,6 +20,9 @@ import MyTickets from './pages/MyTickets';
 
 
 import AdminDashboard from './pages/admin/AdminDashboard';
+import ManageMovies from './pages/admin/ManageMovies';
+
+// ...
 
 // Routes...
 // ...
@@ -55,6 +58,9 @@ function App() {
         <Route path="/my-tickets" element={<MyTickets />} />
 
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
+
+        <Route path="/admin/manage-movies" element={<ManageMovies />} />
+
 
 
 
