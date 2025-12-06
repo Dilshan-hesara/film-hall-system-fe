@@ -18,6 +18,10 @@ import Dashboard from './pages/Dashboard';
 
 import MyTickets from './pages/MyTickets';
 
+
+import AdminDashboard from './pages/admin/AdminDashboard';
+
+// Routes...
 // ...
 // ...
 function App() {
@@ -49,6 +53,9 @@ function App() {
         <Route path='/dashboard' element={<Dashboard />}/>
 
         <Route path="/my-tickets" element={<MyTickets />} />
+
+        <Route path="/admin/dashboard" element={<AdminDashboard />} />
+
 
 
       </Routes>
