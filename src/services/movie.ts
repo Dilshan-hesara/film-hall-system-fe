@@ -12,6 +12,7 @@ export interface MovieData {
   ticketPrice: number;
   status?: 'Now Showing' | 'Coming Soon';
   censorRating: 'U' | 'UA' | 'A' | 'S'; 
+  trailerUrl: string;
 }
 
 export const addMovie = async (movieData: MovieData) => {
