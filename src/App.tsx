@@ -13,6 +13,8 @@ import MyBookings from './pages/MyBookings';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
+import Payment from './pages/Payment';
+
 // ...
 function App() {
   return (
@@ -37,6 +39,8 @@ function App() {
         <Route path="/book/:movieId" element={<BookingPage />} />
 
         <Route path="/my-bookings" element={<MyBookings />} />
+
+        <Route path="/payment" element={<Payment />} />
 
       </Routes>
       <Footer />
