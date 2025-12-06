@@ -11,6 +11,7 @@ import MovieDetails from './pages/MovieDetails';
 import MyBookings from './pages/MyBookings';
 
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 // ...
 function App() {
@@ -38,6 +39,7 @@ function App() {
         <Route path="/my-bookings" element={<MyBookings />} />
 
       </Routes>
+      <Footer />
     </Router>
   );
 }
