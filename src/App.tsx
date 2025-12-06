@@ -14,7 +14,11 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
 import Payment from './pages/Payment';
+import Dashboard from './pages/Dashboard';  
 
+import MyTickets from './pages/MyTickets';
+
+// ...
 // ...
 function App() {
   return (
@@ -41,6 +45,11 @@ function App() {
         <Route path="/my-bookings" element={<MyBookings />} />
 
         <Route path="/payment" element={<Payment />} />
+
+        <Route path='/dashboard' element={<Dashboard />}/>
+
+        <Route path="/my-tickets" element={<MyTickets />} />
+
 
       </Routes>
       <Footer />
