@@ -10,10 +10,13 @@ import MovieDetails from './pages/MovieDetails';
 
 import MyBookings from './pages/MyBookings';
 
+import Navbar from './components/Navbar';
+
 // ...
 function App() {
   return (
     <Router>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />  {/* Main Home Page */}
         <Route path="/login" element={<Login />} />
