@@ -21,3 +21,8 @@ export const createBooking = async (bookingData: any) => {
   const response = await api.post('/bookings/create', bookingData);
   return response.data;
 };
+
+export const getUserBookings = async (userId: string) => {
+  const response = await api.get(`/bookings/user/${userId}`);
+  return response.data;
+};
