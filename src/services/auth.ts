@@ -19,3 +19,14 @@ export const loginUser = async (data: LoginData) => {
   
   return response.data;
 };
+
+export const registerUser = async (userData: any) => {
+  const response = await api.post('/auth/register', userData);
+  return response.data;
+};
+
+// Verify OTP (OTP යවනවා, Token ගන්නවා)
+export const verifyOtpApi = async (data: { email: string, otp: string }) => {
+  const response = await api.post('/auth/verify-otp', data); // Backend Route එක හදාගන්න
+  return response.data;
+};
