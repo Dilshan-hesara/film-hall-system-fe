@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { createBooking } from '../services/booking';
 import { CreditCard, Lock } from 'lucide-react'; // Icons
+import { generateTicketPDF } from '../utils/pdfGenerator';
 
 const Payment: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const bookingData = location.state; // Booking Page එකෙන් එවපු Data
+  const bookingData = location.state; 
 
   const [loading, setLoading] = useState(false);
 
@@ -24,20 +25,29 @@ const Payment: React.FC = () => {
     e.preventDefault();
     setLoading(true);
 
-    // මෙතන පොඩි Fake Delay එකක් දානවා Payment Process වෙනවා වගේ පෙන්වන්න
     setTimeout(async () => {
       try {
-        // ඇත්තටම Booking එක Save කරන්නේ මෙතනදී
+const response = await createBooking(bookingData); 
+        generateTicketPDF({
+            bookingId: response.booking._id, 
+            movieTitle: bookingData.movieTitle,
+            hallName: bookingData.hallName,
+            date: bookingData.date,
+            time: bookingData.time,
+            seats: bookingData.seats,
+            price: bookingData.totalPrice
+        });
+
         await createBooking(bookingData);
         alert('Payment Successful! Ticket Booked.');
-        navigate('/my-bookings'); // සාර්ථක නම් My Tickets පිටුවට
+        navigate('/my-bookings'); 
       } catch (error) {
         alert('Payment Failed! Please try again.');
         console.error(error);
       } finally {
         setLoading(false);
       }
-    }, 2000); // තත්පර 2ක් Delay
+    }, 2000);
   };
 
   return (
