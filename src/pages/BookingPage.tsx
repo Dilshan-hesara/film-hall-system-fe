@@ -833,18 +833,75 @@ const BookingPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center">
       
-      {/* T&C Modal (Same as before) */}
+      {/* 👇 TERMS AND CONDITIONS MODAL */}
       {showTerms && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm p-4">
-           {/* ... (ඔයාගේ පරණ T&C කෝඩ් එක මෙතන තියෙන්න ඕන) ... */}
-           <div className="bg-gray-800 rounded-xl p-6 max-w-lg text-center">
-              <h2 className="text-xl font-bold mb-4 text-red-500">Terms & Conditions</h2>
-              <p className="text-gray-400 mb-6 text-sm">Please accept our terms to proceed with booking.</p>
-              <div className="flex gap-4 justify-center">
-                <button onClick={handleRejectTerms} className="px-4 py-2 border border-red-500 text-red-500 rounded">Exit</button>
-                <button onClick={handleAcceptTerms} className="px-4 py-2 bg-blue-600 rounded">Accept</button>
+          <div className="bg-gray-800 rounded-xl shadow-2xl w-full max-w-2xl max-h-[85vh] flex flex-col border border-gray-700">
+            
+            {/* Modal Header */}
+            <div className="p-6 border-b border-gray-700">
+              <h2 className="text-2xl font-bold text-red-500 text-center">MKD Cinemas - Terms and Conditions</h2>
+              <p className="text-gray-400 text-center text-sm mt-1">Please read carefully before proceeding.</p>
+            </div>
+
+            {/* Modal Content (Scrollable) */}
+            <div className="p-6 overflow-y-auto text-gray-300 text-sm space-y-4 leading-relaxed custom-scrollbar">
+              <p className="font-bold">By purchasing a ticket or entering MKD Cinemas, the patron agrees to the following terms and conditions:</p>
+
+              <div>
+                <h3 className="font-bold text-white mb-1">1. Censor Ratings & Age Restrictions</h3>
+                <p>It is mandatory to adhere to the Censor Board ratings. MKD Cinemas reserves the right to refuse entry if age proof is not provided when requested.</p>
+                <ul className="mt-2 space-y-1 ml-4">
+                  <li>🟢 <span className="font-bold">U (Universal):</span> Suitable for all age groups.</li>
+                  <li>🟡 <span className="font-bold">UA (Parental Guidance):</span> Children below 12 years should be accompanied by a parent.</li>
+                  <li>🔴 <span className="font-bold">A (Adults Only):</span> Restricted to Adults (18+). Valid ID (NIC) is mandatory. No children allowed.</li>
+                  <li>🔵 <span className="font-bold">S (Specialized):</span> Restricted to a specialized audience.</li>
+                </ul>
               </div>
-           </div>
+
+              <div>
+                <h3 className="font-bold text-white mb-1">2. Ticketing & Admissions</h3>
+                <ul className="list-disc ml-5 space-y-1">
+                  <li>Full Ticket Required: We do not offer half-tickets. Children require a full ticket.</li>
+                  <li>Tickets once purchased are <span className="text-red-400 font-bold">non-refundable, non-exchangeable, and non-transferable.</span></li>
+                  <li>Patrons must carry a valid physical ticket or the digital booking confirmation (QR Code) for entry.</li>
+                  <li>Rights of admission are reserved. Management may deny entry to anyone under the influence of alcohol/drugs.</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="font-bold text-white mb-1">3. Security & Prohibited Items</h3>
+                <ul className="list-disc ml-5 space-y-1">
+                  <li>Security checks (frisking/bag checks) may be conducted.</li>
+                  <li>Outside food and beverages are strictly prohibited.</li>
+                  <li>Dangerous items (weapons, sharp objects) are banned.</li>
+                  <li>Recording devices are strictly forbidden inside the auditorium.</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="font-bold text-white mb-1">4. Code of Conduct</h3>
+                <p>Mobile Phones must be on silent. No Smoking/Vaping allowed. Inappropriate behavior will result in removal without refund.</p>
+              </div>
+            </div>
+
+            {/* Modal Footer (Buttons) */}
+            <div className="p-6 border-t border-gray-700 flex gap-4">
+              <button 
+                onClick={handleRejectTerms}
+                className="flex-1 py-3 rounded-lg border border-red-500 text-red-500 font-bold hover:bg-red-500/10 transition"
+              >
+                Reject & Exit
+              </button>
+              <button 
+                onClick={handleAcceptTerms}
+                className="flex-1 py-3 rounded-lg bg-blue-600 text-white font-bold hover:bg-blue-500 transition shadow-lg"
+              >
+                Accept & Continue
+              </button>
+            </div>
+
+          </div>
         </div>
       )}
 
