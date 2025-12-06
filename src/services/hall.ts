@@ -1,7 +1,7 @@
 import api from './api';
 
 export interface HallData {
-    _id?: string; // ID එකත් ඕන වෙනවා Dropdown එකට
+    _id?: string; 
   name: string;
   rows: number;
   columns: number;
@@ -12,9 +12,12 @@ export const addHall = async (hallData: HallData) => {
   return response.data;
 };
 
-// src/services/hall.ts ඇතුලට දාන්න:
 export const getAllHalls = async () => {
   const response = await api.get('/halls/all');
   return response.data;
 };
 
+export const getHallById = async (id: string) => {
+  const response = await api.get(`/halls/${id}`);
+  return response.data;
+};
