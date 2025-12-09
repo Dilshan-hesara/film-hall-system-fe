@@ -15,6 +15,9 @@ const AddMovie: React.FC = () => {
     releaseDate: '',
     posterUrl: '',
     ticketPrice: 0,
+    censorRating: 'U', 
+    coverUrl: '',   // 👇 Initial State
+    trailerUrl: '',
   });
 
   const [loading, setLoading] = useState(false);
@@ -139,8 +142,24 @@ const AddMovie: React.FC = () => {
             />
           </div>
 
+          <div>
+            <label className="block text-sm font-medium text-gray-400 mb-1">Censor Rating</label>
+            <select
+              name="censorRating"
+              value={movie.censorRating}
+              onChange={handleChange}
+              className="w-full bg-gray-700 border border-gray-600 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 outline-none"
+              required
+            >
+              <option value="U">U (Universal)</option>
+              <option value="UA">U/A (Parental Guidance)</option>
+              <option value="A">A (Adults Only)</option>
+              <option value="S">S (Special)</option>
+            </select>
+          </div>
+
           {/* Poster URL */}
-          <div className="col-span-2">
+          {/* <div className="col-span-2">
             <label className="block text-sm font-medium text-gray-400 mb-1">Poster Image URL</label>
             <input
               type="url"
@@ -152,7 +171,31 @@ const AddMovie: React.FC = () => {
               required
             />
             <p className="text-xs text-gray-500 mt-1">* Paste an image link from Google or IMDB here</p>
+          </div> */}
+<div className="col-span-2 border-t border-gray-700 pt-4 mt-2">
+            <h3 className="text-lg font-semibold text-blue-300 mb-4">Media Links</h3>
+            
+            {/* 1. Portrait Poster */}
+            <div className="mb-4">
+                <label className="block text-gray-400 mb-1">Poster URL (Portrait - For Cards)</label>
+                <input type="url" name="posterUrl" value={movie.posterUrl} onChange={handleChange} className="w-full bg-gray-700 p-3 rounded-lg outline-none" placeholder="https://..." required />
+            </div>
+
+            {/* 2. Landscape Cover */}
+            <div className="mb-4">
+                <label className="block text-gray-400 mb-1">Cover Image URL (Landscape - For Slider/Hero)</label>
+                <input type="url" name="coverUrl" value={movie.coverUrl} onChange={handleChange} className="w-full bg-gray-700 p-3 rounded-lg outline-none" placeholder="https://..." required />
+                <p className="text-xs text-gray-500 mt-1">Use a high-quality wide image (1920x1080 recommended).</p>
+            </div>
+
+            {/* 3. YouTube Trailer */}
+            <div className="mb-4">
+                <label className="block text-gray-400 mb-1">YouTube Trailer URL</label>
+                <input type="url" name="trailerUrl" value={movie.trailerUrl} onChange={handleChange} className="w-full bg-gray-700 p-3 rounded-lg outline-none" placeholder="https://www.youtube.com/watch?v=..." required />
+            </div>
           </div>
+
+          
 
           {/* Submit Button */}
           <div className="col-span-2 mt-4">
@@ -170,10 +213,15 @@ const AddMovie: React.FC = () => {
             </button>
           </div>
 
+
+
+          
+
         </form>
       </div>
     </div>
   );
 };
+
 
 export default AddMovie;
