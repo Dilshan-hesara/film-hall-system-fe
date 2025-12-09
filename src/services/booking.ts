@@ -26,3 +26,15 @@ export const getUserBookings = async (userId: string) => {
   const response = await api.get(`/bookings/user/${userId}`);
   return response.data;
 };
+
+// Get All Bookings (Admin)
+export const getAllBookings = async () => {
+  const response = await api.get('/bookings/all');
+  return response.data;
+};
+
+// Cancel Booking (Admin)
+export const cancelBooking = async (id: string) => {
+  const response = await api.delete(`/bookings/${id}`);
+  return response.data;
+};
