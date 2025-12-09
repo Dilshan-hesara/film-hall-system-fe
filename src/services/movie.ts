@@ -29,3 +29,14 @@ export const getMovieById = async (id: string) => {
   const response = await api.get(`/movies/${id}`);
   return response.data;
 };  
+
+
+export const updateMovie = async (id: string, movieData: Partial<MovieData>) => {
+  const response = await api.put(`/movies/${id}`, movieData);
+  return response.data;
+};
+
+export const deleteMovie = async (id: string) => {
+  const response = await api.delete(`/movies/${id}`);
+  return response.data;
+};
