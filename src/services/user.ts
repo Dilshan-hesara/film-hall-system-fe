@@ -26,7 +26,6 @@ export const changeUserPassword = async (data: any) => {
   return response.data;
 };
 
-// ... imports
 
 // Get All Users
 export const getAllUsers = async () => {
@@ -43,5 +42,24 @@ export const updateUserRole = async (id: string, role: 'user' | 'admin') => {
 // Delete User
 export const deleteUser = async (id: string) => {
   const response = await api.delete(`/users/${id}`);
+  return response.data;
+};
+
+
+// Create New Admin
+export const createAdmin = async (data: any) => {
+  const response = await api.post('/users/admin/create', data);
+  return response.data;
+};
+
+// Get All Admins
+export const getAllAdmins = async () => {
+  const response = await api.get('/users/admin/all');
+  return response.data;
+};
+
+// Admin Force Reset Password
+export const adminResetPassword = async (id: string, newPassword: string) => {
+  const response = await api.put(`/users/admin/reset-password/${id}`, { newPassword });
   return response.data;
 };
