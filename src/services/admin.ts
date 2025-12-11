@@ -25,3 +25,10 @@ export const getRecentBookings = async () => {
   const response = await api.get('/admin/recent');
   return response.data;
 };
+
+
+// Get Report Data
+export const getSalesData = async (month: number, year: number) => {
+  const response = await api.get(`/admin/reports/sales?month=${month}&year=${year}`);
+  return response.data;
+};
