@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Instagram, Mail, Phone, MapPin } from 'lucide-react'; // Icons
+import { Facebook, Twitter, Instagram, Mail, Phone, MapPin ,MessageSquare } from 'lucide-react'; // Icons
 
 const Footer: React.FC = () => {
   return (
@@ -39,10 +39,17 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-white font-bold text-lg mb-6 border-l-4 border-blue-500 pl-3">Support</h3>
             <ul className="space-y-3 text-sm">
-              <li><a href="#" className="hover:text-blue-400 transition-colors">Terms & Conditions</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">FAQ</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">Refund Policy</a></li>
+              <li><a href="/terms" className="hover:text-blue-400 transition-colors">Terms & Conditions</a></li>
+              <li><a href="/privacy" className="hover:text-blue-400 transition-colors">Privacy Policy</a></li>
+              <li><a href="/faq" className="hover:text-blue-400 transition-colors">FAQ</a></li>
+              <li><a href="/refund-policy" className="hover:text-blue-400 transition-colors">Refund Policy</a></li>
+            
+            <li className="pt-2">
+                <Link to="/feedback" className="flex items-center gap-2 text-yellow-500 hover:text-white transition-colors font-semibold">
+                    <MessageSquare size={16} /> Give Feedback
+                </Link>
+              </li>
+
             </ul>
           </div>
 
