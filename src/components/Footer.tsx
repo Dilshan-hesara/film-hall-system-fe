@@ -76,7 +76,7 @@ const Footer: React.FC = () => {
 
         {/* BOTTOM BAR */}
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
-          {/* 👇 Copyright Name Update */}
+          {/* Copyright Name Update */}
           <p>&copy; {new Date().getFullYear()} MKD Cinemas. All Rights Reserved.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
              <span>Designed for Entertainment</span>
