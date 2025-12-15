@@ -5,6 +5,10 @@ import {
   ShieldCheck, Calendar, LogOut, X, Film as FilmIcon 
 } from 'lucide-react';
 
+
+import { QrCode } from 'lucide-react';
+
+
 interface SidebarProps {
   isOpen: boolean;
   toggleSidebar: () => void;
@@ -63,6 +67,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar, handleLogout }
             <NavItem to="/admin/manage-bookings" icon={Ticket} label="Bookings" />
             <NavItem to="/admin/manage-users" icon={Users} label="Users" />
             <NavItem to="/admin/manage-admins" icon={ShieldCheck} label="Admins" />
+
+<div className="text-xs font-bold text-gray-500 uppercase px-3 mb-3 mt-6 tracking-wider">Tools</div>
+<NavItem to="/admin/scan-ticket" icon={QrCode} label="Scan Tickets" />
         </nav>
 
         {/* BOTTOM LOGOUT */}
