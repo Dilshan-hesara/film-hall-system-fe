@@ -40,3 +40,14 @@ export const deleteMovie = async (id: string) => {
   const response = await api.delete(`/movies/${id}`);
   return response.data;
 };
+
+// Advanced Search
+export const searchMoviesApi = async (search: string, genre: string, language: string) => {
+  const queryParams = new URLSearchParams();
+  if (search) queryParams.append('search', search);
+  if (genre && genre !== 'All') queryParams.append('genre', genre);
+  if (language && language !== 'All') queryParams.append('language', language);
+
+  const response = await api.get(`/movies/search?${queryParams.toString()}`);
+  return response.data;
+};
