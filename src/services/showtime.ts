@@ -5,7 +5,7 @@ export interface ShowtimeData {
   movie: string;
   hall: {
     _id: string;
-    name: string; // Hall Name එක ඕන වෙනවා UI එකට
+    name: string; 
   };
   showDate: string;
   showTime: string;
@@ -13,13 +13,32 @@ export interface ShowtimeData {
 }
 
 
-///
+
+
+// export interface ShowtimeData {
+//   _id: string;
+//   movie: { title: string; duration: number }; // Populated Object
+//   hall: { name: string }; // Populated Object
+//   showDate: string;
+//   showTime: string;
+//   ticketPrice: number;
+// }
+
+// export interface ShowtimeInput {
+//   movieId: string;
+//   hallId: string;
+//   showDate: string;
+//   showTime: string;
+//   ticketPrice: number;
+// }
+
+
+
 export const addShowtime = async (data: ShowtimeData) => {
   const response = await api.post('/showtimes/add', data);
   return response.data;
 };
 
-// Movie එකකට අදාළ Showtimes ගන්න (Booking Page එකට පස්සේ ඕන වෙයි)
 export const getShowtimes = async (movieId: string) => {
   const response = await api.get(`/showtimes/movie/${movieId}`);
   return response.data;
@@ -31,10 +50,16 @@ export const getScheduleByDate = async (date: string) => {
   return response.data;
 };
 
-// Show එකක් මකන්න
 export const deleteShowtime = async (id: string) => {
   const response = await api.delete(`/showtimes/${id}`);
   return response.data;
 };
 
 
+export const getShowtimesApi = async (date: string, movieId?: string) => {
+  let url = `/showtimes/filter?date=${date}`;
+  if (movieId) url += `&movieId=${movieId}`;
+  
+  const response = await api.get(url);
+  return response.data; 
+};
