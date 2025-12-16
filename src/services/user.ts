@@ -63,3 +63,16 @@ export const adminResetPassword = async (id: string, newPassword: string) => {
   const response = await api.put(`/users/admin/reset-password/${id}`, { newPassword });
   return response.data;
 };
+
+
+// Toggle Wishlist
+export const toggleWishlist = async (userId: string, movieId: string) => {
+  const response = await api.put('/users/wishlist/toggle', { userId, movieId });
+  return response.data;
+};
+
+// Get Wishlist
+export const getUserWishlist = async (userId: string) => {
+  const response = await api.get(`/users/wishlist/${userId}`);
+  return response.data;
+};
