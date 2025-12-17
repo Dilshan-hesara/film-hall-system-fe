@@ -569,8 +569,7 @@ const MovieDetails: React.FC = () => {
                         {/* Watch Trailer Button (NEW) */}
                         <button 
                             onClick={() => setPlayingTrailerUrl(movie.trailerUrl)}
-                            className="flex items-center gap-3 bg-white/10 hover:bg-yellow-500 hover:text-black backdrop-blur-md border border-white/30 text-white px-8 py-3 rounded-full font-bold transition-all group"
-                        >
+className="flex items-center gap-3 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white px-8 py-3 rounded-full font-bold transition-all shadow-lg"                        >
                             <Play size={22} className="fill-current group-hover:scale-110 transition-transform"/> 
                             Watch Trailer
                         </button>
