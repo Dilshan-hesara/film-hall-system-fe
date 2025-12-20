@@ -52,3 +52,16 @@ export const createCounterBookingApi = async (data: any) => {
   const response = await api.post('/bookings/counter-book', data);
   return response.data;
 };
+
+// Search Bookings (Manual)
+export const searchBookingsApi = async (query: string) => {
+  const response = await api.get(`/bookings/search?query=${query}`);
+  return response.data;
+};
+
+
+// Get Daily Report Data
+export const getDailyReportApi = async () => {
+  const response = await api.get('/bookings/daily-report');
+  return response.data;
+};
