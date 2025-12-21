@@ -32,3 +32,8 @@ export const getSalesData = async (month: number, year: number) => {
   const response = await api.get(`/admin/reports/sales?month=${month}&year=${year}`);
   return response.data;
 };
+
+export const getReceptionStats = async () => {
+  const response = await api.get('/admin/reception-dashboard');
+  return response.data;
+};
