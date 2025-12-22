@@ -25,8 +25,21 @@ export const registerUser = async (userData: any) => {
   return response.data;
 };
 
-// Verify OTP (OTP යවනවා, Token ගන්නවා)
+// Verify OTP for Registration
 export const verifyOtpApi = async (data: { email: string, otp: string }) => {
-  const response = await api.post('/auth/verify-otp', data); // Backend Route එක හදාගන්න
+  const response = await api.post('/auth/verify-otp', data);
+  return response.data;
+};
+
+
+// 1. Send OTP for Password Reset
+export const forgotPasswordApi = async (email: string) => {
+  const response = await api.post('/auth/forgot-password', { email });
+  return response.data;
+};
+
+// 2. Reset Password with OTP
+export const resetPasswordApi = async (data: { email: string, otp: string, newPassword: string }) => {
+  const response = await api.post('/auth/reset-password', data);
   return response.data;
 };
