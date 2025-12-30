@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Outlet, Navigate } from 'react-router-dom';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import AddMovie from './pages/admin/AddMovie';
@@ -29,6 +29,30 @@ import ManageAdmins from './pages/admin/ManageAdmins';
 import AdminLayout from './layouts/AdminLayout';
 import SuperAdminInfo from './pages/admin/SuperAdminInfo';
 import AdminProfile from './pages/admin/AdminProfile'; 
+import Feedback from './pages/Feedback';
+
+import NotFound from './pages/NotFound'; // Import කරන්න
+
+
+import ScanTicket from './pages/admin/ScanTicket';
+import Watchlist from './pages/Watchlist';
+import ExploreMovies from './pages/ExploreMovies';
+
+
+
+import Terms from './pages/Terms';
+import Privacy from './pages/Privacy';
+import RefundPolicy from './pages/RefundPolicy';
+import FAQ from './pages/FAQ';
+
+
+import CounterBooking from './pages/admin/CounterBooking';
+import FindBooking from './pages/admin/FindBooking';
+import ReceptionDashboard from './pages/admin/ReceptionDashboard';
+import ReceptionLayout from './layouts/ReceptionLayout'; 
+import ReceptionProfile from './pages/admin/ReceptionProfile';
+
+import FindBookingPage from './pages/FindBookingPage';
 
 
 function App() {
@@ -84,7 +108,6 @@ function App() {
 <Router>
       <Routes>
         
-        {/* === PUBLIC ROUTES (Navbar & Footer එක්ක) === */}
         <Route element={<><Navbar /><div className='min-h-screen'><Outlet/></div><Footer /></>}>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
@@ -98,9 +121,10 @@ function App() {
          <Route path="/admin/add-showtime" element={<AddShowtime />} /> */}
          {/* <Route path="/admin/super-profile" element={<SuperAdminInfo />} /> */}
 
+          <Route path="/watchlist" element={<Watchlist />} />
+          <Route path="/movies" element={<ExploreMovies />} />
 
 
-         {/* Movie Details Page Route */}
          <Route path="/movie/:id" element={<MovieDetails />} /> 
         
          <Route path="/book/:movieId" element={<BookingPage />} />
@@ -112,16 +136,38 @@ function App() {
          <Route path='/dashboard' element={<Dashboard />}/>
 
          <Route path="/my-tickets" element={<MyTickets />} />
-            {/* ... other user routes */}
+
+
+        <Route path="/feedback" element={<Feedback />} />
+        <Route path="*" element={<NotFound />} />
+
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/refund-policy" element={<RefundPolicy />} />
+        <Route path="/faq" element={<FAQ />} />
+              <Route path="/find-booking-d" element={<FindBookingPage />} />
+
         </Route>
 
 
         <Route element={<><div className='min-h-screen'><Outlet/></div></>}>
 
-        {/* === ADMIN ROUTES (Sidebar එක්ක) === */}
+
+            <Route path="/reception" element={<ReceptionLayout />}>
+          <Route index element={<Navigate to="/reception-dashboard" replace />} />
+          
+          <Route path="reception-dashboard" element={<ReceptionDashboard />} />
+          <Route path="pos" element={<CounterBooking />} />
+          <Route path="scan-tickets" element={<ScanTicket />} />
+          <Route path="find-booking" element={<FindBooking />} />
+              <Route path="profile" element={<ReceptionProfile />} /> 
+              <Route path="find-booking-d" element={<FindBookingPage />} />
+
+
+      </Route>
+      
         <Route  path="/admin" element={<AdminLayout />} >
             
-            {/* 👇 මේ Pages වලට දැන් Sidebar එක ඔටෝම එනවා */}
             <Route path="dashboard" element={<AdminDashboard />} />
             <Route path="manage-movies" element={<ManageMovies />} />
             <Route path="manage-halls" element={<ManageHalls />} />
@@ -142,7 +188,12 @@ function App() {
            <Route path="add-hall" element={<AddHall />} />
            <Route path="add-showtime" element={<AddShowtime />} />
 
-            {/* ... Add other admin pages here */}
+
+          <Route path="scan-ticket" element={<ScanTicket />} />
+
+{/* <Route path="pos" element={<CounterBooking />} />
+<Route path="find-booking" element={<FindBooking />} />
+<Route path="reception-dashboard" element={<ReceptionDashboard />} /> */}
             {/* <Route path="manage-bookings" element={<ManageBookings />} /> */}
             {/* <Route path="manage-users" element={<ManageUsers />} /> */}
             {/* <Route path="manage-admins" element={<ManageAdmins />} /> */}
@@ -151,6 +202,8 @@ function App() {
 
         </Route>
       </Routes>
+
+
     </Router>
 
 
