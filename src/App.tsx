@@ -71,8 +71,6 @@ function App() {
 //         <Route path="/admin/add-hall" element={<AddHall />} />
 //         <Route path="/admin/add-showtime" element={<AddShowtime />} />
 
-
-//         {/* Movie Details Page Route */}
 //         <Route path="/movie/:id" element={<MovieDetails />} /> 
         
 //         <Route path="/book/:movieId" element={<BookingPage />} />
