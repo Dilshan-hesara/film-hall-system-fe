@@ -53,6 +53,7 @@ import ReceptionLayout from './layouts/ReceptionLayout';
 import ReceptionProfile from './pages/admin/ReceptionProfile';
 
 import FindBookingPage from './pages/FindBookingPage';
+import ChatBot from './components/user/ChatBot';
 
 
 function App() {
@@ -106,7 +107,7 @@ function App() {
 <Router>
       <Routes>
         
-        <Route element={<><Navbar /><div className='min-h-screen'><Outlet/></div><Footer /></>}>
+        <Route element={<><Navbar /><div className='min-h-screen'><Outlet/></div><Footer /><ChatBot /></>}>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
            <Route path="/register" element={<Register />} /> {/* Route */}
