@@ -88,7 +88,7 @@ api.interceptors.response.use(
         const refreshToken = localStorage.getItem('refreshToken');
         if (!refreshToken) throw new Error("No refresh token");
 
-        const res = await axios.post('http://localhost:5000/api/v1/auth/refresh', {
+        const res = await axios.post('https://film-hall-system-be.vercel.app/api/v1/auth/refresh', {
           token: refreshToken,
         });
 
