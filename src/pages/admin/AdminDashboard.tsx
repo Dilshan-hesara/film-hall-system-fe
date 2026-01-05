@@ -179,7 +179,7 @@ const AdminDashboard: React.FC = () => {
                                     paddingAngle={5}
                                     dataKey="value"
                                 >
-                                    {stats.movieChart.map((entry: any, index: number) => (
+                                    {stats.movieChart.map((_: any, index: number) => (
                                         <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                                     ))}
                                 </Pie>
