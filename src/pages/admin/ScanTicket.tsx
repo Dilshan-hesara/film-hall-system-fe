@@ -55,14 +55,17 @@ const ScanTicket: React.FC = () => {
 
         {/* --- SCANNIG MODE --- */}
         {status === 'scanning' && (
-            <div className="border-4 border-yellow-500 rounded-xl overflow-hidden shadow-2xl relative bg-gray-900">
+    <div className="border-4 border-yellow-500 rounded-xl overflow-hidden shadow-2xl relative bg-gray-900">
                 <Scanner 
-                    onResult={(text, result) => handleScan(text)} 
-                    onError={(error) => console.log(error?.message)}
-                    options={{ delayBetweenScanAttempts: 500 }}
+                    onScan={(results: any) => {
+                        if (results && results.length > 0) {
+                            handleScan(results[0].rawValue);
+                        }
+                    }}
+                    onError={(error: any) => console.log(error?.message)}
+                    scanDelay={500}
                 />
                 
-                {/* Overlay Guidelines */}
                 <div className="absolute inset-0 border-2 border-white/20 pointer-events-none">
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 border-2 border-red-500 rounded-lg animate-pulse"></div>
                 </div>
