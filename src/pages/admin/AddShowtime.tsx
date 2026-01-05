@@ -40,20 +40,19 @@ const AddShowtime: React.FC = () => {
     fetchData();
   }, []);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setError('');
 
     try {
       await addShowtime({
-        movieId,
-        hallId,
+        movie: movieId, 
+        hall: hallId ,
         showDate,
         showTime,
-
         ticketPrice: Number(ticketPrice),
-      });
+      } as any );
       alert('Showtime Added Successfully!');
       navigate('/');
     } catch (err: any) {
