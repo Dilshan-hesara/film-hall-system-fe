@@ -110,7 +110,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { addHall } from '../../services/hall';
-import { Grid, Armchair } from 'lucide-react'; // Icons
+import { Grid } from 'lucide-react'; // Icons
 
 const AddHall: React.FC = () => {
   const navigate = useNavigate();

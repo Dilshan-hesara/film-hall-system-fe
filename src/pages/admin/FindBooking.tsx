@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { searchBookingsApi } from '../../services/booking';
 import axios from 'axios';
-import { Search, Printer, CheckCircle, XCircle, Calendar, Clock, User, Phone, Mail, Trash2, AlertTriangle } from 'lucide-react';
+import { Search, Printer, Calendar, Clock, User, Phone, Trash2, AlertTriangle } from 'lucide-react';
 
 const FindBooking: React.FC = () => {
   const [query, setQuery] = useState('');

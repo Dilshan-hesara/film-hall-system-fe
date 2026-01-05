@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { getMovies } from '../../services/movie'; 
 import { getShowtimes } from '../../services/showtime'; 
 import { createCounterBookingApi, getOccupiedSeats } from '../../services/booking'; 
-import { Monitor, User, Phone, CheckCircle, Printer, Calendar, Clock, MapPin, Grid, AlertCircle } from 'lucide-react';
+import { Monitor, User, Phone,  Printer, Calendar, Clock, MapPin, Grid, AlertCircle } from 'lucide-react';
 
 const SEAT_PRICE = 1000;
 

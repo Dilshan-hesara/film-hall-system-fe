@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Film, Home, AlertTriangle, Camera } from 'lucide-react';
+import { Film, Home, Camera } from 'lucide-react';
 
 const NotFound: React.FC = () => {
   return (

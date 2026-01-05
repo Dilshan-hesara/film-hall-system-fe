@@ -8,10 +8,10 @@ import { Play, Calendar, Clock, Ticket, X, Info, Heart } from 'lucide-react';
 import type { MovieData } from '../services/movie';
 
 
-import 'swiper/css';
-import 'swiper/css/effect-fade';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+// import 'swiper/css';
+// import 'swiper/css/effect-fade';
+// import 'swiper/css/navigation';
+// import 'swiper/css/pagination';
 
 const Home: React.FC = () => {
   const [movies, setMovies] = useState<MovieData[]>([]);

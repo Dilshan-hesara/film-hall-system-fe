@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { getReceptionStats } from '../../services/admin'; 
 import { getDailyReportApi } from '../../services/booking';
 import { useNavigate } from 'react-router-dom';
-import { Film, Calendar, MapPin, PlayCircle, PlusCircle, Clock, Users, Ticket, DollarSign, History, Printer, Search, FileText, X } from 'lucide-react';
+import { Calendar, PlayCircle, PlusCircle, Ticket, DollarSign, History, Printer, Search, FileText, X } from 'lucide-react';
 
 const ReceptionDashboard: React.FC = () => {
   const navigate = useNavigate();

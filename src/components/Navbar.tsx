@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { Menu, X, User, LogOut, Ticket, Film, LayoutDashboard, Heart } from 'lucide-react';
+import { Menu, X, User, LogOut, Ticket, Film,  Heart } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const navigate = useNavigate();

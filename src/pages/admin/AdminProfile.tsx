@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { updateUserProfile, changeUserPassword } from '../../services/user';
 import { 
   User, Lock, LogOut, Mail, ShieldCheck, Edit2, 
-  Crown, LayoutDashboard, CheckCircle 
+  Crown, LayoutDashboard 
 } from 'lucide-react';
 
 const AVATAR_OPTIONS = [
@@ -96,7 +96,7 @@ const AdminProfile: React.FC = () => {
 
   if (!user) return <div className="text-white text-center mt-20">Loading...</div>;
 
-  const themeColor = isSuperAdmin ? 'red' : 'blue';
+  // const themeColor = isSuperAdmin ? 'red' : 'blue';
   const glowColor = isSuperAdmin ? 'bg-red-600/10' : 'bg-blue-600/10';
   const borderColor = isSuperAdmin ? 'border-red-600' : 'border-blue-500';
 

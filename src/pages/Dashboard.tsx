@@ -4,7 +4,7 @@ import { getUserBookings } from '../services/booking';
 import { updateUserProfile, changeUserPassword } from '../services/user';
 import { generateTicketPDF } from '../utils/pdfGenerator';
 import { 
-  User, Ticket, Lock, LogOut, Mail, Phone, 
+  User, Ticket, Lock, LogOut, Mail, 
   Calendar, Download, Edit2, ShieldCheck, CheckCircle 
 } from 'lucide-react';
 

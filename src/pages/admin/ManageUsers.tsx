@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getAllUsers, updateUserRole, deleteUser } from '../../services/user';
-import { Search, Trash2, User, ShieldCheck, Mail, Shield, AlertTriangle } from 'lucide-react';
+import { Search, Trash2, User, ShieldCheck, Mail, Shield } from 'lucide-react';
 
 const ManageUsers: React.FC = () => {
   const [users, setUsers] = useState<any[]>([]);

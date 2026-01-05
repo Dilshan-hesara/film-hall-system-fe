@@ -5,7 +5,7 @@ import { FileText, Table } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { getDashboardStats, getRecentBookings } from '../../services/admin';
 import { 
-  Ticket, DollarSign, Film, Users, TrendingUp, Calendar, 
+  Ticket, DollarSign, Film, Users,  Calendar, 
   BarChart2, PieChart as PieChartIcon, AlertCircle 
 } from 'lucide-react';
 import { Link } from 'react-router-dom';

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate, useSearchParams } from 'react-router-dom';
-import { getOccupiedSeats, createBooking } from '../services/booking';
+import { getOccupiedSeats } from '../services/booking';
 import { getHallById } from '../services/hall';
 import { getMovieById } from '../services/movie';
 

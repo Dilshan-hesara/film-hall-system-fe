@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { updateUserProfile, changeUserPassword } from '../../services/user'; 
 import { 
   User, Lock, LogOut, Mail, ShieldCheck, Edit2, 
-  LayoutDashboard, CheckCircle, Monitor 
+  LayoutDashboard, Monitor 
 } from 'lucide-react';
 
 const AVATAR_OPTIONS = [
