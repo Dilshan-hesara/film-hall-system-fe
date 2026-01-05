@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
-import { LayoutDashboard, Monitor, Search, LogOut, QrCode, User } from 'lucide-react';
+import { LayoutDashboard, Monitor, Search, LogOut, QrCode } from 'lucide-react';
 
 const ReceptionSidebar: React.FC = () => {
   const location = useLocation();
