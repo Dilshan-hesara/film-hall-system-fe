@@ -4,12 +4,17 @@ A comprehensive, full-stack web application designed for modern cinema managemen
 
 Built with the MERN Stack (MongoDB, Express, React, Node).
 
+## 🔗 Quick Links
+
+| 🌐 **Live Website** | 🎥 **Video Demo** |
+|:---:|:---:|
+| [Visit Website](mkdcinemas.dilshanhesara.com) | [Watch on YouTube](https://youtu.be/qLToy69-wQ4) |
+
 ## Live Deployment
 
 | Component | Status | URL |
 |-----------|:------:|-----|
 | **Frontend (User/Admin/POS/S-Admin)** | Live | [mkdcinemas.dilshanhesara.com](mkdcinemas.dilshanhesara.com) |
-| **Backend API** | Live | [https://film-hall-system-be.vercel.app/](https://film-hall-system-be.vercel.app/) |
 
 ---
 
