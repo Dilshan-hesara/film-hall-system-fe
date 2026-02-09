@@ -8,13 +8,13 @@ Built with the MERN Stack (MongoDB, Express, React, Node).
 
 | 🌐 **Live Website** | 🎥 **Video Demo** |
 |:---:|:---:|
-| [Visit Website](mkdcinemas.dilshanhesara.com) | [Watch on YouTube](https://youtu.be/qLToy69-wQ4) |
+| [Visit Website](https://mkdcinemas.dilshanhesara.com/) | [Watch on YouTube](https://youtu.be/qLToy69-wQ4) |
 
 ## Live Deployment
 
 | Component | Status | URL |
 |-----------|:------:|-----|
-| **Frontend (User/Admin/POS/S-Admin)** | Live | [mkdcinemas.dilshanhesara.com](mkdcinemas.dilshanhesara.com) |
+| **Frontend (User/Admin/POS/S-Admin)** | Live | [mkdcinemas.dilshanhesara.com](https://mkdcinemas.dilshanhesara.com/) |
 
 ---
 
