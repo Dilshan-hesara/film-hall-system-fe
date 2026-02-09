@@ -8,7 +8,7 @@ Built with the MERN Stack (MongoDB, Express, React, Node).
 
 | Component | Status | URL |
 |-----------|:------:|-----|
-| **Frontend (User/Admin/POS/S-Admin)** | Live | [https://film-hall-system-fe.vercel.app/](https://film-hall-system-fe.vercel.app/) |
+| **Frontend (User/Admin/POS/S-Admin)** | Live | [mkdcinemas.dilshanhesara.com](mkdcinemas.dilshanhesara.com) |
 | **Backend API** | Live | [https://film-hall-system-be.vercel.app/](https://film-hall-system-be.vercel.app/) |
 
 ---
